@@ -1,0 +1,13 @@
+U-NET WHOLE must be a structure with a vertical concatenation of all the rest of the datasets, not shuffled. 
+First column: "noisy" image
+Second column: denoised image
+Third column: tag identifying (HEALTHY SUBJCT/PATIENT)(SUBJ. NUMBER)(PHASE)(SEQUENCE)(DIRECTION)(Number of Average)
+It's different from the others datasets because its minimum values have been all sent to 0 (there were pixel values below 0 and they were sent to 0 value)
+The images have also been converted to uint8
+This is done with zerobelow0.m.
+
+
+U_NET RESIDUALS 
+
+U-NET WHOLE with the difference that the gorund truth now is:
+"noisy" image - ground truth
